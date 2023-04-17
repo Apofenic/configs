@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -71,7 +73,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.zsh_keys
+# source ~/.zsh_keys
 
 # User configuration
 
@@ -90,7 +92,7 @@ source ~/.zsh_keys
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-ssh
+# ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -101,15 +103,36 @@ ssh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias uicommit="~/shell-scripts/commit.sh portal-ui"
-alias v3="~/portal-v3-ui"
 alias ui="~/portal-ui"
+alias uicommit="~/scripts/commit.sh portal-ui"
+alias mono="~/eltoro-ui"
+alias monocommit="~/scripts/commit.sh eltoro-ui"
+alias quickcommit="~/scripts/quick_commit.sh eltoro-ui"
+alias monobuild="~/eltoro-ui && yarn clean-build-all"
+alias beewoapp="~/eltoro-ui/apps/beewo"
+alias beewoappcommit="~/scripts/commit.sh eltoro-ui"
+alias monoreview="~/eltoro_ui_PR_review"
+alias monoreviewbuild="~/eltoro_ui_PR_review && yarn clean-build-all"
+alias v2="~/portal-v2"
+alias v3="~/portal-v3-ui"
 alias robo="~/robo3t/bin/robo3t"
+alias backstage="~/eltoro/eltoro-backstage"
+alias api="~/go/src/github.com/eltorocorp/"
+alias advert="~/go/src/github.com/eltorocorp/advertisingplatform/"
 
-. $HOME/.asdf/asdf.sh
+# . $HOME/.asdf/asdf.sh
 
-. $HOME/.asdf/completions/asdf.bash
+# . $HOME/.asdf/completions/asdf.bash
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+export GOPATH=$HOME/go
+export GOBIN=$HOME/go/bin
+export PATH=$(go env GOPATH)/bin:$PATH
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
