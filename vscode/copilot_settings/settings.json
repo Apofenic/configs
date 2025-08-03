@@ -1,0 +1,96 @@
+
+{
+  // ▶️ General settings
+  "chat.commandCenter.enabled": true, // Controls whether to show the Copilot menu in the VS Code title bar.
+  "workbench.commandPalette.experimental.askChatLocation": "chatView", // Experimental: Controls where the Command Palette should ask chat questions.
+  "search.searchView.semanticSearchBehavior": "manual", // Preview: Configure when to run semantic search in the Search view: manually, when no text results, or always.
+  "search.searchView.keywordSuggestions": false, // Preview: Controls whether to show keyword suggestions in the Search view.
+  "workbench.settings.showAISearchToggle": true, // Experimental: Enable searching settings with AI in the Settings editor.
+
+  // ▶️ Code editing settings
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  }, // Enable or disable Copilot completions per language (default: enabled everywhere except plaintext, markdown, SCM input)
+  "github.copilot.nextEditSuggestions.enabled": true, // Enable Copilot's next-edit suggestions (NES).
+
+  "github.copilot.editor.enableCodeActions": true, // Enable Copilot-specific code actions in the editor.
+  "github.copilot.renameSuggestions.triggerAutomatically": true, // Automatically suggest renames via Copilot.
+  "editor.inlineSuggest.edits.allowCodeShifting": "always", // Allow code shifting in inline suggestions (always/never/auto).
+  "editor.inlineSuggest.edits.renderSideBySide": "auto", // Render inline suggestion edits side‑by‑side (auto/on/off).
+
+  // ▶️ Chat settings
+  "github.copilot.chat.localeOverride": "auto", // Not documented, but defaults to auto locale.
+  "github.copilot.chat.useProjectTemplates": true, // Use default project templates in chat.
+  "github.copilot.chat.scopeSelection": true, // Enable selecting scope of files included in chat context.
+  "github.copilot.chat.terminalChatLocation": "chatView", // Location of terminal chat interface.
+  "github.copilot.chat.codesearch.enabled": true, // Enable code search results in Copilot Chat (experimental)
+  "github.copilot.chat.completionContext.typescript.mode": "on", // Enable Copilot Chat completion context for TypeScript files
+  "chat.detectParticipant.enabled": true, // Automatically detect chat participants.
+  "chat.editor.fontFamily": "default", // Chat editor font family.
+  "chat.editor.fontSize": 14, // Chat editor font size.
+  "chat.editor.fontWeight": "default", // Chat editor font weight.
+  "chat.editor.lineHeight": 0, // Integer line height, 0 = default.
+  "chat.editor.wordWrap": "off", // Word wrap settings in chat editor.
+  "chat.editing.autoAcceptDelay": 0, // Delay (ms) before auto-accepting edits.
+  "chat.editRequests": "inline", // Display edit requests inline in chat.
+  "github.copilot.chat.edits.suggestRelatedFilesFromGitHistory": true, // Suggest related files based on Git history.
+  "chat.sendElementsToChat.enabled": true, // Allow sending selected elements to chat.
+
+  // ▶️ Agent mode settings
+  "chat.agent.enabled": true, // Enable Copilot Agent mode.
+  "chat.agent.maxRequests": 25, // Maximum parallel requests per agent.
+  "github.copilot.chat.agent.autoFix": true, // Automatically apply fix suggestions in agent mode.
+  "github.copilot.chat.agent.runTasks": true, // Allow agent to run tasks/scripts.
+  "chat.mcp.enabled": true, // Enable multi-step Copilot processes (MCP).
+  "chat.tools.autoApprove": false, // Require manual approval for tool usage in agent mode.
+  "github.copilot.chat.newWorkspaceCreation.enabled": true, // Enable workspace creation via chat.
+  "github.copilot.chat.agent.thinkingTool": false, // Experimental: show thinking UI for agent tool selection.
+  "github.copilot.chat.agent.terminal.allowList": { "echo": true, "cd": true, "ls": true, "cat": true, "pwd": true, "Write-Host": true, "Set-Location": true, "Get-ChildItem": true, "Get-Content": true, "Get-Location": true }, // Allowed terminal commands in agent mode.
+  "github.copilot.chat.agent.terminal.denyList": { "rm": true, "rmdir": true, "del": true, "kill": true, "curl": true, "wget": true, "eval": true, "chmod": true, "chown": true, "Remove-Item": true }, // Denied terminal commands in agent mode.
+
+  // ▶️ Inline chat settings
+  "inlineChat.finishOnType": false, // Finish chat session when typing starts again.
+  "inlineChat.holdToSpeech": true, // Hold to use speech input in inline chat.
+  "editor.inlineSuggest.syntaxHighlightingEnabled": true, // Enable syntax highlighting in inline suggestions.
+  "inlineChat.lineEmptyHint": false, // Show hint for empty lines in inline chat.
+  "inlineChat.lineNaturalLanguageHint": true, // Show natural language hints in inline chat.
+  "github.copilot.chat.editor.temporalContext.enabled": false, // Include temporal context in inline chat (experimental).
+
+  // ▶️ Code review settings
+  "github.copilot.chat.reviewSelection.enabled": true, // Enable review functionality for selections.
+  "github.copilot.chat.reviewSelection.instructions": [], // Custom instructions for review selections.
+
+  // ▶️ Custom instructions settings
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true, // Use `.github/copilot-instructions.md` files for code gen.
+  "chat.instructionsFilesLocations": { ".github/instructions": true }, // Folders containing instruction files.
+  "github.copilot.chat.commitMessageGeneration.instructions": [], // Custom commit message instructions - use .github/instructions/commit-message.instructions.md instead.
+  "github.copilot.chat.pullRequestDescriptionGeneration.instructions": [], // Custom PR description instructions.
+
+  // ▶️ Prompt files settings
+  "chat.promptFiles": true, // Experimental: enable reusable prompt files.
+  "chat.promptFilesLocations": { ".github/prompts": true }, // Folders with prompt files.
+
+  // ▶️ Chat mode settings
+  "chat.modeFilesLocations": { ".github/chatmodes": true }, // Folders defining chat modes.
+
+  // ▶️ Debugging settings
+  "github.copilot.chat.startDebugging.enabled": true, // Enable `/startDebugging` command to generate launch.json.
+  "github.copilot.chat.copilotDebugCommand.enabled": true, // Enable `copilot-debug` CLI command.
+
+  // ▶️ Testing settings
+  "github.copilot.chat.generateTests.codeLens": false, // Show CodeLens to generate tests.
+  "github.copilot.chat.setupTests.enabled": true, // Enable setup tests via chat.
+
+  // ▶️ Notebook settings
+  "notebook.experimental.generate": true, // Enable experimental notebook generation.
+  "github.copilot.chat.edits.newNotebook.enabled": true, // Add edits support for notebooks.
+  "github.copilot.chat.notebook.followCellExecution.enabled": false, // Follow cell execution in notebook chat.
+
+  // ▶️ Accessibility settings
+  "inlineChat.accessibleDiffView": "auto", // Accessible diff view in inline chat.
+  "accessibility.signals.chatRequestSent": { "sound": "auto" }, // Accessibility signals for chat request.
+  "accessibility.signals.chatResponseReceived": { "sound": "auto" } // Accessibility signals for chat response.
+}

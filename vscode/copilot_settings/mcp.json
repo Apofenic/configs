@@ -1,0 +1,46 @@
+{
+  "servers": {
+    "filesystem": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/anthonylubrino/go/src/github.com/eltorocorp"
+      ],
+      "env": {}
+    },
+      "browsermcp": {
+        "command": "npx",
+        "args": ["@browsermcp/mcp@latest"]
+      },
+      "jira": {
+      "type": "stdio",
+      "command": "/Users/anthonylubrino/.nvm/versions/node/v18.20.1/bin/mcp-atlassian-jira",
+      "args": [],
+      "env": {
+        "JIRA_HOST": "${env:ATLASSIAN_HOST}",
+        "JIRA_USERNAME": "${env:ATLASSIAN_USER_EMAIL}",
+        "JIRA_API_TOKEN": "${env:ATLASSIAN_API_TOKEN}"
+      }
+    },
+    "playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
+    },
+    "github": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_TOKEN}"
+      }
+    }
+  }
+}

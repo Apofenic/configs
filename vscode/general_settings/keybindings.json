@@ -1,0 +1,17 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+f", // You can choose any keybinding you prefer
+        "command": "editor.foldAll",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+f", // You can choose any keybinding you prefer
+        "command": "editor.unfoldAll",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "f6", 
+        "command": "workbench.action.navigateEditorGroups" 
+    }
+]

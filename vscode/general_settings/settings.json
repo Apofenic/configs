@@ -1,0 +1,107 @@
+{
+  "editor.snippetSuggestions": "top",
+  "editor.tabCompletion": "on",
+  "editor.fontSize": 14,
+  "git.autofetch": true,
+  "yaml.schemas": {
+    "file:///Users/anthonylubrino/.vscode/extensions/atlassian.atlascode-3.8.7/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "atlascode.jira.enabled": true,
+  "atlascode.bitbucket.enabled": false,
+  "atlascode.jira.jqlList": [
+    {
+      "id": "b1effa58-ae81-400c-9a2a-e810551ff797",
+      "enabled": true,
+      "name": "My eltorocorp Issues",
+      "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+      "siteId": "3d546da2-b006-47ee-a72f-4b8b244c0770",
+      "monitor": true
+    }
+  ],
+  "editor.formatOnSave": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vscode-pets.theme": "forest",
+  "vscode-pets.throwBallWithMouse": true,
+  "vscode-pets.petColor": "black",
+  "vscode-pets.petSize": "medium",
+  "githubPullRequests.pullBranch": "never",
+  "go.toolsManagement.autoUpdate": true,
+  "workbench.startupEditor": "none",
+  "gitlens.ai.experimental.provider": "openai",
+  "gitlens.ai.experimental.openai.model": "gpt-4-turbo-preview",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "terminal.integrated.lineHeight": 1.4,
+  "terminal.integrated.fontSize": 14,
+  "explorer.confirmDelete": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDragAndDrop": false,
+  "terminal.integrated.env.osx": {},
+  "github.copilot.advanced": {},
+  "gopls": {
+    "build.buildFlags": ["-tags=unit,integration,smoke"]
+  },
+  "opa.dependency_paths.regal": "/Users/anthonylubrino/regal",
+  "opa.languageServers": ["regal"],
+  "mssql.connectionGroups": [
+    {
+      "name": "ROOT",
+      "id": "E0447E57-D8AC-49E7-9D1F-E1A58E2D9B6C"
+    }
+  ],
+  "mssql.connections": [],
+  "cSpell.userWords": ["eltoro", "hagrid", "nextgen", "Orgmanagerv"],
+  "vscode-pets-ex.theme": "animated",
+  "vscode-pets-ex.petSize": "medium",
+  "vscode-pets-ex.petColor": "akita",
+  "vscode-pets-ex.petType": "fox",
+  "inlineChat.enableV2": true,
+  "github.copilot.chat.copilotDebugCommand.enabled": false,
+  "github.copilot.chat.startDebugging.enabled": false,
+  "editor.inlineSuggest.edits.showCollapsed": true,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "files.exclude": {
+    "**/.git": false,
+    "**/.vscode": false,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  },
+  "explorer.excludeGitIgnore": false,
+  "scm.defaultViewMode": "tree",
+  "git.decorations.enabled": true,
+  "explorer.sortOrder": "default",
+  "explorer.fileNesting.enabled": false,
+  "git.enabled": true,
+  "git.path": null,
+  "files.associations": {
+    "*.instructions.md": "markdown"
+  },
+  "search.exclude": {
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": true
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true
+  },
+  "docker.extension.enableComposeLanguageServer": false,
+  "[instructions]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "diffEditor.ignoreTrimWhitespace": false
+  },
+  "chat.sendElementsToChat.attachCSS": false
+}
